@@ -773,7 +773,7 @@ MonoBehaviour:
   DebugSnack: {fileID: 526621697}
   OriginMarker: {fileID: 1775238792}
   Origin: {fileID: 85334880}
-  displacement: {fileID: 0}
+  displacement: {fileID: 627916104}
 --- !u!114 &627916104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,6 +788,7 @@ MonoBehaviour:
   textTemplate: {fileID: 197844198}
   displays: []
   cam: {fileID: 896679035}
+  DebugSnack: {fileID: 526621699}
 --- !u!114 &627916105
 MonoBehaviour:
   m_ObjectHideFlags: 0

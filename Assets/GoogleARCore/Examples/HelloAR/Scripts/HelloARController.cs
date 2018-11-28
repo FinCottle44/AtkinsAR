@@ -176,6 +176,7 @@ namespace GoogleARCore.Examples.HelloAR
                     // Make Andy model a child of the anchor.
                     andyObject.transform.parent = anchor.transform;
                     measureRing.transform.parent = anchor.transform;
+                    //DebugSnack.GetComponent<Text>().text = "DISPLAY SUPPOSEDLY CALLED";
                     displacement.Display(andyObject, 100f);
                 }
             }
