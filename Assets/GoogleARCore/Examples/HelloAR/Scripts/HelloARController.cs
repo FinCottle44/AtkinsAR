@@ -163,8 +163,8 @@ namespace GoogleARCore.Examples.HelloAR
 
                     // Instantiate Andy model at the hit pose.
                     var andyObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
-                    var measureRing = Instantiate(Ring, hit.Pose.position + new Vector3(0,0.05f,0), hit.Pose.rotation);
-
+                    //var measureRing = Instantiate(Ring, hit.Pose.position + new Vector3(0,0.05f,0), hit.Pose.rotation);
+                    var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
                     // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
                     andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
                     measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
