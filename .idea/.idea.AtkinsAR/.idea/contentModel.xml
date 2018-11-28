@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Finco\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_AtkinsAR.-364683111.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Finco\Documents\GitHub\AtkinsAR" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="GoogleARCore" t="Include">
+          <e p="Editor" t="Include">
+            <e p="ARCoreiOSDependencies.template" t="Include" />
+          </e>
+          <e p="Examples" t="Include">
+            <e p="AugmentedImage" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="AugmentedImageExampleController.cs" t="Include" />
+                <e p="AugmentedImageVisualizer.cs" t="Include" />
+              </e>
+            </e>
+            <e p="CloudAnchors" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="AnchorIdFromRoomRequestMessage.cs" t="Include" />
+                <e p="AnchorIdFromRoomResponseMessage.cs" t="Include" />
+                <e p="ARKitHelper.cs" t="Include" />
+                <e p="CloudAnchorController.cs" t="Include" />
+                <e p="CloudAnchorUIController.cs" t="Include" />
+                <e p="RoomSharingClient.cs" t="Include" />
+                <e p="RoomSharingMsgType.cs" t="Include" />
+                <e p="RoomSharingServer.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Common" t="Include">
+              <e p="Materials" t="Include">
+                <e p="Shaders" t="Include">
+                  <e p="MobileDiffuseWithLightEstimation.shader" t="Include" />
+                  <e p="MobileSpecularWithLightEstimation.shader" t="Include" />
+                  <e p="PlaneGrid.shader" t="Include" />
+                  <e p="PointCloud.shader" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="DetectedPlaneGenerator.cs" t="Include" />
+                <e p="DetectedPlaneVisualizer.cs" t="Include" />
+                <e p="PointcloudVisualizer.cs" t="Include" />
+              </e>
+            </e>
+            <e p="ComputerVision" t="Include">
+              <e p="Materials" t="Include">
+                <e p="EdgeDetectionBackground.shader" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="ComputerVisionController.cs" t="Include" />
+                <e p="EdgeDetector.cs" t="Include" />
+                <e p="PointClickHandler.cs" t="Include" />
+                <e p="TextureReader.cs" t="Include" />
+                <e p="TextureReaderApi.cs" t="Include" />
+              </e>
+            </e>
+            <e p="HelloAR" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="HelloARController.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="SDK" t="Include">
+            <e p="InstantPreview" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="InstantPreviewInput.cs" t="Include" />
+                <e p="InstantPreviewManager.cs" t="Include" />
+                <e p="InstantPreviewTrackedPoseDriver.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Materials" t="Include">
+              <e p="ARBackground.shader" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Anchor.cs" t="Include" />
+              <e p="AndroidPermissionsManager.cs" t="Include" />
+              <e p="AndroidPermissionsRequestResult.cs" t="Include" />
+              <e p="Api" t="Include">
+                <e p="AnchorApi.cs" t="Include" />
+                <e p="ApiApkInstallationStatus.cs" t="Include" />
+                <e p="ApiApkInstallStatusExtensions.cs" t="Include" />
+                <e p="ApiArStatus.cs" t="Include" />
+                <e p="ApiArStatusExtensions.cs" t="Include" />
+                <e p="ApiAvailability.cs" t="Include" />
+                <e p="ApiAvailabilityExtensions.cs" t="Include" />
+                <e p="ApiCameraFocusMode.cs" t="Include" />
+                <e p="ApiCameraMetadata.cs" t="Include" />
+                <e p="ApiCloudAnchorMode.cs" t="Include" />
+                <e p="ApiCloudAnchorState.cs" t="Include" />
+                <e p="ApiCloudAnchorStateExtensions.cs" t="Include" />
+                <e p="ApiConstants.cs" t="Include" />
+                <e p="ApiDisplayUvCoords.cs" t="Include" />
+                <e p="ApiDisplayUvCoordsExtensions.cs" t="Include" />
+                <e p="ApiFeaturePointOrientationMode.cs" t="Include" />
+                <e p="ApiFeaturePointOrientationModeExtensions.cs" t="Include" />
+                <e p="ApiLightEstimateState.cs" t="Include" />
+                <e p="ApiLightEstimateStateExtensions.cs" t="Include" />
+                <e p="ApiLightEstimationMode.cs" t="Include" />
+                <e p="ApiPlaneFindingMode.cs" t="Include" />
+                <e p="ApiPlaneType.cs" t="Include" />
+                <e p="ApiPlaneTypeExtensions.cs" t="Include" />
+                <e p="ApiPoseData.cs" t="Include" />
+                <e p="ApiPrestoConfig.cs" t="Include" />
+                <e p="ApiPrestoStatus.cs" t="Include" />
+                <e p="ApiPrestoStatusExtensions.cs" t="Include" />
+                <e p="ApiTrackableType.cs" t="Include" />
+                <e p="ApiTrackingState.cs" t="Include" />
+                <e p="ApiTrackingStateExtensions.cs" t="Include" />
+                <e p="ApiTrackingStateXPExtensions.cs" t="Include" />
+                <e p="ApiUpdateMode.cs" t="Include" />
+                <e p="AugmentedImageApi.cs" t="Include" />
+                <e p="AugmentedImageDatabaseApi.cs" t="Include" />
+                <e p="CameraApi.cs" t="Include" />
+                <e p="CameraConfigApi.cs" t="Include" />
+                <e p="CameraConfigListApi.cs" t="Include" />
+                <e p="CameraMetadataApi.cs" t="Include" />
+                <e p="FrameApi.cs" t="Include" />
+                <e p="HitTestApi.cs" t="Include" />
+                <e p="ImageApi.cs" t="Include" />
+                <e p="LightEstimateApi.cs" t="Include" />
+                <e p="NativeSession.cs" t="Include" />
+                <e p="PlaneApi.cs" t="Include" />
+                <e p="PointApi.cs" t="Include" />
+                <e p="PointCloudApi.cs" t="Include" />
+                <e p="PoseApi.cs" t="Include" />
+                <e p="SessionApi.cs" t="Include" />
+                <e p="SessionConfigApi.cs" t="Include" />
+                <e p="TrackableApi.cs" t="Include" />
+                <e p="TrackableListApi.cs" t="Include" />
+              </e>
+              <e p="ApkAvailabilityStatus.cs" t="Include" />
+              <e p="ApkInstallationStatus.cs" t="Include" />
+              <e p="ARCoreBackgroundRenderer.cs" t="Include" />
+              <e p="ARCoreSession.cs" t="Include" />
+              <e p="ARCoreSessionConfig.cs" t="Include" />
+              <e p="Async" t="Include">
+                <e p="WaitForTaskCompletionYieldInstruction.cs" t="Include" />
+              </e>
+              <e p="AsyncTask.cs" t="Include" />
+              <e p="AugmentedImage.cs" t="Include" />
+              <e p="AugmentedImageDatabase.cs" t="Include" />
+              <e p="AugmentedImageDatabaseEntry.cs" t="Include" />
+              <e p="CameraConfig.cs" t="Include" />
+              <e p="CameraFocusMode.cs" t="Include" />
+              <e p="CameraImageBytes.cs" t="Include" />
+              <e p="CameraIntrinsics.cs" t="Include" />
+              <e p="CameraMetadataTag.cs" t="Include" />
+              <e p="CameraMetadataValue.cs" t="Include" />
+              <e p="CloudAnchorResult.cs" t="Include" />
+              <e p="CloudServiceResponse.cs" t="Include" />
+              <e p="Deprecated" t="Include">
+                <e p="TrackedPlane.cs" t="Include" />
+                <e p="TrackedPoint.cs" t="Include" />
+                <e p="TrackedPointOrientationMode.cs" t="Include" />
+              </e>
+              <e p="DetectedPlane.cs" t="Include" />
+              <e p="DetectedPlaneFindingMode.cs" t="Include" />
+              <e p="DetectedPlaneType.cs" t="Include" />
+              <e p="DisplayUvCoords.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="ARCoreIOSSupportHelper.cs" t="Include" />
+                <e p="ARCoreIOSSupportPreprocessBuild.cs" t="Include" />
+                <e p="ARCoreProjectSettingsWindow.cs" t="Include" />
+                <e p="ARCoreSupportedPreprocessBuild.cs" t="Include" />
+                <e p="AssetHelper.cs" t="Include" />
+                <e p="AugmentedImageDatabaseContextMenu.cs" t="Include" />
+                <e p="AugmentedImageDatabaseInspector.cs" t="Include" />
+                <e p="AugmentedImageDatabasePreprocessBuild.cs" t="Include" />
+                <e p="BackgroundJobExecutor.cs" t="Include" />
+                <e p="CloudAnchorPreprocessBuild.cs" t="Include" />
+                <e p="ExampleBuildHelper.cs" t="Include" />
+                <e p="ExamplePreprocessBuild.cs" t="Include" />
+                <e p="PreprocessBuildBase.cs" t="Include" />
+                <e p="RequiredOptionalPreprocessBuild.cs" t="Include" />
+              </e>
+              <e p="EnvironmentalLight.cs" t="Include" />
+              <e p="ExperimentSupport" t="Include">
+                <e p="ExperimentBase.cs" t="Include" />
+                <e p="ExperimentManager.cs" t="Include" />
+              </e>
+              <e p="FeaturePoint.cs" t="Include" />
+              <e p="FeaturePointOrientationMode.cs" t="Include" />
+              <e p="Frame.cs" t="Include" />
+              <e p="LightEstimate.cs" t="Include" />
+              <e p="LightEstimateState.cs" t="Include" />
+              <e p="Managers" t="Include">
+                <e p="ARCoreAndroidLifecycleManager.cs" t="Include" />
+                <e p="ARCoreIOSLifecycleManager.cs" t="Include" />
+                <e p="ARPrestoCallbackManager.cs" t="Include" />
+                <e p="CloudServiceManager.cs" t="Include" />
+                <e p="ILifecycleManager.cs" t="Include" />
+                <e p="LifecycleManager.cs" t="Include" />
+                <e p="TrackableManager.cs" t="Include" />
+              </e>
+              <e p="PointCloudPoint.cs" t="Include" />
+              <e p="Session.cs" t="Include" />
+              <e p="SessionStatus.cs" t="Include" />
+              <e p="SessionStatusExtensions.cs" t="Include" />
+              <e p="Trackable.cs" t="Include" />
+              <e p="TrackableHit.cs" t="Include" />
+              <e p="TrackableHitFlags.cs" t="Include" />
+              <e p="TrackableQueryFilter.cs" t="Include" />
+              <e p="TrackingState.cs" t="Include" />
+              <e p="Utility" t="Include">
+                <e p="ARCoreProjectSettings.cs" t="Include" />
+                <e p="ARDebug.cs" t="Include" />
+                <e p="ConversionHelper.cs" t="Include" />
+                <e p="DllImportNoop.cs" t="Include" />
+                <e p="IntPtrEqualityComparer.cs" t="Include" />
+                <e p="MarshalingHelper.cs" t="Include" />
+                <e p="ShellHelper.cs" t="Include" />
+                <e p="SuppressMemoryAllocationErrorAttribute.cs" t="Include" />
+              </e>
+              <e p="XPAnchor.cs" t="Include" />
+              <e p="XPSession.cs" t="Include" />
+              <e p="XPSessionStatus.cs" t="Include" />
+              <e p="XPTrackingState.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PlayServicesResolver" t="Include">
+          <e p="Editor" t="Include">
+            <e p="play-services-resolver_v1.2.88.0.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="AtkinsAR.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
