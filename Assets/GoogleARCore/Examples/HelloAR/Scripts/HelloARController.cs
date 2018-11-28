@@ -20,6 +20,8 @@
 
 using System.Configuration.Assemblies;
 using System.Linq.Expressions;
+using TMPro;
+using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
 namespace GoogleARCore.Examples.HelloAR
@@ -30,6 +32,7 @@ namespace GoogleARCore.Examples.HelloAR
     using UnityEngine;
     using UnityEngine.EventSystems;
     using UnityEngine.UI;
+    using TMPro;
 
 #if UNITY_EDITOR
     // Set up touch input propagation while using Instant Preview in the editor.
@@ -75,6 +78,7 @@ namespace GoogleARCore.Examples.HelloAR
         public GameObject OriginMarker;
         public Transform Origin;
         public DisplacementDisplay displacement;
+        public List<GameObject> rings;
 
         /// <summary>
         /// The rotation in degrees need to apply to model when the Andy model is placed.
@@ -159,7 +163,7 @@ namespace GoogleARCore.Examples.HelloAR
 
                     // Instantiate Andy model at the hit pose.
                     var andyObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
-                    var measureRing = Instantiate(Ring, hit.Pose.position + new Vector3(0,0.01f,0), hit.Pose.rotation);
+                    var measureRing = Instantiate(Ring, hit.Pose.position + new Vector3(0,0.05f,0), hit.Pose.rotation);
 
                     // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
                     andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
@@ -168,7 +172,7 @@ namespace GoogleARCore.Examples.HelloAR
                     measureRing.SetActive(true);
                     andyObject.tag = "point";
                     measureRing.tag = "point";
-                    
+                    rings.Add(measureRing);
                     // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
                     // world evolves.
                     var anchor = hit.Trackable.CreateAnchor(hit.Pose);
@@ -179,6 +183,11 @@ namespace GoogleARCore.Examples.HelloAR
                     //DebugSnack.GetComponent<Text>().text = "DISPLAY SUPPOSEDLY CALLED";
                     displacement.Display(andyObject, 100f);
                 }
+            }
+
+            foreach (GameObject ring in rings)
+            {
+                RingLookAt(ring.transform, Cam.transform);
             }
         }
 
@@ -260,20 +269,44 @@ namespace GoogleARCore.Examples.HelloAR
             {
                 Destroy(go);
             }
+            GameObject[] texts = GameObject.FindGameObjectsWithTag("pointText");
+            foreach (var t in texts)
+            {
+                t.GetComponent<TextMeshPro>().text = "";
+                t.tag = "cleared";
+            }
         }
 
+ 
+
         public void PlaceBelowUser()
+
         {
-            //place ring below user
-            Origin.position = Cam.transform.position - Cam.transform.localPosition;
-            
-        }    
+            Session.GetTrackables<DetectedPlane>(m_AllPlanes);
+            TrackableHit hit2;
+            float Distance;
+            Vector3 down = transform.TransformDirection(Vector3.down);
+            if (Frame.Raycast(transform.position, (down), out hit2))
+            {
+                Distance = hit2.Distance;
+                var newring = Instantiate(Ring, Cam.transform);
+                newring.transform.position = Cam.transform.position - new Vector3(0, Distance, 0);
+            }
+        }  
 
         void DebugPos()
         {
             OriginMarker.transform.position = Origin.position;
             
-            //DebugSnack.GetComponent<Text>().text = Cam.transform.position.ToString();
+            DebugSnack.GetComponent<Text>().text = Cam.transform.position.ToString();
+        }
+
+        public void RingLookAt(Transform ring, Transform target)
+        {
+            var lookPos = target.position - ring.position;
+            lookPos.y = 0;
+            var rotation = Quaternion.LookRotation(lookPos);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime);
         }
     }    
 }
