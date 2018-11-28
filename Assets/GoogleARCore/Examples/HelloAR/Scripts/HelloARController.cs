@@ -177,6 +177,7 @@ namespace GoogleARCore.Examples.HelloAR
                     measureRing.transform.parent = anchor.transform;
                 }
             }
+
         }
 
         /// <summary>
@@ -261,12 +262,68 @@ namespace GoogleARCore.Examples.HelloAR
 
         public void PlaceBelowUser()
         {
-            //place ring below user
-            Origin.position = Cam.transform.position - Cam.transform.localPosition;
-            
-        }    
+            //Session.GetTrackables<DetectedPlane>(m_AllPlanes);
+            //TrackableHit hit2;
+            //float Distance;
+           // Vector3 down = transform.TransformDirection(Vector3.down);
+          //  if (Frame.Raycast(transform.position, (down), out hit2))
+           // {
+            //    Distance = hit2.Distance;
+            //    var newring = Instantiate(Ring, Cam.transform);
+            //    newring.transform.position = Cam.transform.position - new Vector3(0, Distance, 0);
+           
+            TrackableHit hit2;
+            TrackableHitFlags raycastFilter = TrackableHitFlags.PlaneWithinPolygon |
+            TrackableHitFlags.FeaturePointWithSurfaceNormal;
+            Vector3 down = transform.TransformDirection(Vector3.down);
+            if (Frame.Raycast(transform.position, (down), out hit2, 10f, raycastFilter))
+            {
+                // Use hit pose and camera pose to check if hittest is from the
+                // back of the plane, if it is, no need to create the anchor.
+                if ((hit2.Trackable is DetectedPlane) &&
+                    Vector3.Dot(FirstPersonCamera.transform.position - hit2.Pose.position,
+                        hit2.Pose.rotation * Vector3.up) < 0)
+                {
+                    Debug.Log("Hit at back of the current DetectedPlane");
+                }
+                else
+                {
+                    // Choose the Andy model for the Trackable that got hit.
+                    GameObject prefab;
+                    if (hit2.Trackable is FeaturePoint)
+                    {
+                    
+                        prefab = AndyPointPrefab;
+                    }
+                    else
+                    {
+                        prefab = AndyPlanePrefab;
+                    }
 
-        void DebugPos()
+                    // Instantiate Andy model at the hit pose.
+                    var andyObject = Instantiate(prefab, hit2.Distance, hit2.Pose.rotation);
+                    var measureRing = Instantiate(Ring, hit2.Pose.position + new Vector3(0, 0.01f, 0), hit2.Pose.rotation);
+
+                    // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
+                    andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
+                    measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
+                    //measureRing.transform.localScale = new Vector3(0.2f, 0, 0.2f);
+                    measureRing.SetActive(true);
+                    andyObject.tag = "point";
+                    measureRing.tag = "point";
+
+                    // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
+                    // world evolves.
+                    var anchor = hit2.Trackable.CreateAnchor(hit2.Pose);
+
+                    // Make Andy model a child of the anchor.
+                    andyObject.transform.parent = anchor.transform;
+                    measureRing.transform.parent = anchor.transform;
+                }
+            }
+        }
+
+    void DebugPos()
         {
             OriginMarker.transform.position = Origin.position;
             
