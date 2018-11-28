@@ -74,6 +74,7 @@ namespace GoogleARCore.Examples.HelloAR
         public GameObject DebugSnack;
         public GameObject OriginMarker;
         public Transform Origin;
+        public DisplacementDisplay displacement;
 
         /// <summary>
         /// The rotation in degrees need to apply to model when the Andy model is placed.
@@ -175,6 +176,7 @@ namespace GoogleARCore.Examples.HelloAR
                     // Make Andy model a child of the anchor.
                     andyObject.transform.parent = anchor.transform;
                     measureRing.transform.parent = anchor.transform;
+                    displacement.Display(andyObject, 100f);
                 }
             }
         }
@@ -270,7 +272,7 @@ namespace GoogleARCore.Examples.HelloAR
         {
             OriginMarker.transform.position = Origin.position;
             
-            DebugSnack.GetComponent<Text>().text = Cam.transform.position.ToString();
+            //DebugSnack.GetComponent<Text>().text = Cam.transform.position.ToString();
         }
     }    
 }
