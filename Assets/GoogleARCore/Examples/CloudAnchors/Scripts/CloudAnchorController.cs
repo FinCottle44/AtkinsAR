@@ -26,6 +26,7 @@ namespace GoogleARCore.Examples.CloudAnchors
     using GoogleARCore.Examples.Common;
     using UnityEngine;
     using UnityEngine.UI;
+    using UnityEngine.EventSystems;
 
 #if UNITY_EDITOR
     // Set up touch input propagation while using Instant Preview in the editor.
@@ -42,6 +43,7 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// are many ways to share this data and this not part of the ARCore Cloud Anchors API surface.
         /// </summary>
         public RoomSharingServer RoomSharingServer;
+
 
         /// <summary>
         /// A controller for managing UI associated with the example.
@@ -128,6 +130,14 @@ namespace GoogleARCore.Examples.CloudAnchors
             Hosting,
             Resolving,
         }
+        public GameObject Ring;
+        public GameObject Cam;
+        public GameObject DebugSnack;
+        public GameObject OriginMarker;
+        public Transform Origin;
+        public DisplacementDisplay displacement;
+        //public List<GameObject> rings;
+        public Camera FirstPersonCamera;
 
         /// <summary>
         /// The Unity Start() method.
@@ -161,49 +171,81 @@ namespace GoogleARCore.Examples.CloudAnchors
             {
                 return;
             }
-
-            // If the player has not touched the screen then the update is complete.
+            // If the player has not touched the screen, we are done with this update.
             Touch touch;
             if (Input.touchCount < 1 || (touch = Input.GetTouch(0)).phase != TouchPhase.Began)
             {
                 return;
             }
 
+            //If user touched UI then do not register touch on plane underneath
+            if (EventSystem.current.IsPointerOverGameObject() || EventSystem.current.currentSelectedGameObject != null)
+            {
+                return;
+            }
+
             // Raycast against the location the player touched to search for planes.
-            if (Application.platform != RuntimePlatform.IPhonePlayer)
+            TrackableHit hit;
+            if (Frame.Raycast(touch.position.x, touch.position.y, TrackableHitFlags.PlaneWithinPolygon, out hit))
             {
-                TrackableHit hit;
-                if (Frame.Raycast(touch.position.x, touch.position.y,
-                        TrackableHitFlags.PlaneWithinPolygon, out hit))
-                {
-                    m_LastPlacedAnchor = hit.Trackable.CreateAnchor(hit.Pose);
-                }
-            }
-            else
-            {
-                Pose hitPose;
-                if (m_ARKit.RaycastPlane(ARKitFirstPersonCamera, touch.position.x, touch.position.y, out hitPose))
-                {
-                    m_LastPlacedAnchor = m_ARKit.CreateAnchor(hitPose);
-                }
+                m_LastPlacedAnchor = hit.Trackable.CreateAnchor(hit.Pose);
             }
 
-            if (m_LastPlacedAnchor != null)
+            if (m_LastPlacedAnchor !=null)
             {
-                // Instantiate Andy model at the hit pose.
-                var andyObject = Instantiate(_GetAndyPrefab(), m_LastPlacedAnchor.transform.position,
-                    m_LastPlacedAnchor.transform.rotation);
+                // Use hit pose and camera pose to check if hittest is from the
+                // back of the plane, if it is, no need to create the anchor.
+                //if ((hit.Trackable is DetectedPlane) &&
+                //    Vector3.Dot(FirstPersonCamera.transform.position - hit.Pose.position,
+                //        hit.Pose.rotation * Vector3.up) < 0)
+                //{
+                //    Debug.Log("Hit at back of the current DetectedPlane");
+                //}
+                //else
+                //{
+                    // Choose the Andy model for the Trackable that got hit.
+                    GameObject prefab;
+                    if (hit.Trackable is FeaturePoint)
+                    {
+                        prefab = _GetAndyPrefab();
+                    }
+                    else
+                    {
+                        prefab = _GetAndyPrefab();
+                    }
+                    // Instantiate Andy model at the hit pose.
+                    var andyObject = Instantiate(prefab, m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
+                    //var measureRing = Instantiate(Ring, hit.Pose.position + new Vector3(0,0.05f,0), hit.Pose.rotation);
+                    var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
+                    // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
+                    andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
+                    measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
+                    //measureRing.transform.localScale = new Vector3(0.2f, 0, 0.2f);
+                    measureRing.SetActive(true);
+                    andyObject.tag = "point";
+                    measureRing.tag = "point";
+                    //rings.Add(measureRing);
+                    // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
+                    // world evolves.
+                     
 
-                // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
-                andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
-
-                // Make Andy model a child of the anchor.
-                andyObject.transform.parent = m_LastPlacedAnchor.transform;
-
-                // Save cloud anchor.
-                _HostLastPlacedAnchor();
+                    // Make Andy model a child of the anchor.
+                    andyObject.transform.parent = m_LastPlacedAnchor.transform;
+                    measureRing.transform.parent = m_LastPlacedAnchor.transform;
+                    //DebugSnack.GetComponent<Text>().text = "DISPLAY SUPPOSEDLY CALLED";
+                    displacement.Display(andyObject, 100f);
+                    _HostLastPlacedAnchor();
+               // }
             }
+
+            //foreach (GameObject ring in rings)
+            //{
+            //    RingLookAt(ring.transform, Cam.transform);
+            //}
+            // Save cloud anchor.
+
         }
+    
 
         /// <summary>
         /// Handles user intent to enter a mode where they can place an anchor to host or to exit this mode if
