@@ -163,6 +163,7 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// </summary>
         public void Update()
         {
+            m_LastPlacedAnchor = null;
             _UpdateApplicationLifecycle();
 
             // If we are not in hosting mode or the user has already placed an anchor then the update
@@ -204,37 +205,36 @@ namespace GoogleARCore.Examples.CloudAnchors
                 //else
                 //{
                     // Choose the Andy model for the Trackable that got hit.
-                    GameObject prefab;
-                    if (hit.Trackable is FeaturePoint)
-                    {
-                        prefab = _GetAndyPrefab();
-                    }
-                    else
-                    {
-                        prefab = _GetAndyPrefab();
-                    }
+                   //-- GameObject prefab;
+                    //if (hit.Trackable is FeaturePoint)
+                   // {
+                   //     prefab = _GetAndyPrefab();
+                   // }
+                   //// else
+                   // {
+                   //     prefab = _GetAndyPrefab();
+                   // }
                     // Instantiate Andy model at the hit pose.
-                    var andyObject = Instantiate(prefab, m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
+                var andyObject = Instantiate(_GetAndyPrefab(), m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
                     //var measureRing = Instantiate(Ring, hit.Pose.position + new Vector3(0,0.05f,0), hit.Pose.rotation);
-                    var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
+                    //--var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
                     // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
-                    andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
-                    measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
+                andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
+                    //--measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
                     //measureRing.transform.localScale = new Vector3(0.2f, 0, 0.2f);
-                    measureRing.SetActive(true);
-                    andyObject.tag = "point";
-                    measureRing.tag = "point";
+                    //--measureRing.SetActive(true);
+                    //--measureRing.tag = "point";
                     //rings.Add(measureRing);
                     // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
                     // world evolves.
                      
 
                     // Make Andy model a child of the anchor.
-                    andyObject.transform.parent = m_LastPlacedAnchor.transform;
-                    measureRing.transform.parent = m_LastPlacedAnchor.transform;
+                andyObject.transform.parent = m_LastPlacedAnchor.transform;
+                    //--measureRing.transform.parent = m_LastPlacedAnchor.transform;
                     //DebugSnack.GetComponent<Text>().text = "DISPLAY SUPPOSEDLY CALLED";
-                    displacement.Display(andyObject, 100f);
-                    _HostLastPlacedAnchor();
+                    //--displacement.Display(andyObject, 100f);
+                _HostLastPlacedAnchor();
                // }
             }
 
@@ -243,7 +243,6 @@ namespace GoogleARCore.Examples.CloudAnchors
             //    RingLookAt(ring.transform, Cam.transform);
             //}
             // Save cloud anchor.
-
         }
     
 
@@ -339,6 +338,7 @@ namespace GoogleARCore.Examples.CloudAnchors
 
                 RoomSharingServer.SaveCloudAnchorToRoom(m_CurrentRoom, result.Anchor);
                 UIController.ShowHostingModeBegin("Cloud anchor was created and saved.");
+                return;
             });
 #endif
         }
