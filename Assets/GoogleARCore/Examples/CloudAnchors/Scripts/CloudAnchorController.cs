@@ -216,9 +216,9 @@ namespace GoogleARCore.Examples.CloudAnchors
                    // }
                     // Instantiate Andy model at the hit pose.
                 var andyObject = Instantiate(_GetAndyPrefab(), m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
-                    //var measureRing = Instantiate(Ring, hit.Pose.position + new Vector3(0,0.05f,0), hit.Pose.rotation);
-                    //--var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
-                    // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
+                //var measureRing = Instantiate(Ring, hit.Pose.position + new Vector3(0,0.05f,0), hit.Pose.rotation);
+                //--var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
+                // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
                 andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
                     //--measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
                     //measureRing.transform.localScale = new Vector3(0.2f, 0, 0.2f);
@@ -338,6 +338,7 @@ namespace GoogleARCore.Examples.CloudAnchors
 
                 RoomSharingServer.SaveCloudAnchorToRoom(m_CurrentRoom, result.Anchor);
                 UIController.ShowHostingModeBegin("Cloud anchor was created and saved.");
+                Instantiate(Ring, result.Anchor.transform);
                 return;
             });
 #endif
@@ -359,6 +360,7 @@ namespace GoogleARCore.Examples.CloudAnchors
 
                 m_LastResolvedAnchor = result.Anchor;
                 Instantiate(_GetAndyPrefab(), result.Anchor.transform);
+                Instantiate(Ring, result.Anchor.transform);
                 UIController.ShowResolvingModeSuccess();
             }));
         }
