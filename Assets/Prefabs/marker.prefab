@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 4557736394307000}
   - component: {fileID: 95754318948143840}
   - component: {fileID: 114785780359253690}
+  - component: {fileID: 114844140354061838}
   m_Layer: 0
   m_Name: marker
   m_TagString: Untagged
@@ -721,3 +722,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e4b4ffa5ae91645ab7e9a4015cc38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+--- !u!114 &114844140354061838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1759488078947420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c368fca698be6418dc92758ffc715a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {r: 0, g: 0, b: 0, a: 0}
