@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/menuScene.unity
+    guid: eccef0929fb6a9244863c5c63b8a5d51
+  - enabled: 1
     path: Assets/Scenes/AtkinsAR.unity
     guid: 957f4aa578b43764ea5978da8fb58720
   m_configObjects: {}
