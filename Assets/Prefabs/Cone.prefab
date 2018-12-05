@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4223375950201346}
   - component: {fileID: 33693777919907830}
   - component: {fileID: 23119409893365900}
+  - component: {fileID: 64618927373921380}
   m_Layer: 0
   m_Name: HP_Cone
   m_TagString: Untagged
@@ -257,4 +258,18 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1566218481932080}
+  m_Mesh: {fileID: 4300004, guid: 3f3d2af6bc8f4444e979a34725a7eacb, type: 3}
+--- !u!64 &64618927373921380
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566218481932080}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300004, guid: 3f3d2af6bc8f4444e979a34725a7eacb, type: 3}
