@@ -12,6 +12,7 @@ public class DisplacementDisplay : MonoBehaviour
 	public List<GameObject> displays;
 	public Camera cam;
 	public Text DebugSnack;
+	public TMP_Dropdown ddObject;
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,14 +29,23 @@ public class DisplacementDisplay : MonoBehaviour
 		}
 	}
 
-	public void Display(GameObject item, float distance)
+	public void Display(GameObject item)
 	{
-		//DebugSnack.GetComponent<Text>().text = "Display CALLED";
-		var loc = item.transform.position + new Vector3(0f, 0.3f, 0);
+		Vector3 loc;
+		Color c;
+		if (ddObject.value == 0)//if marker NOT CONE
+		{ 
+			loc = item.transform.position + new Vector3(0f, 0.3f, 0);
+			c = Color.white; //marker
+		} 
+		else
+		{
+			loc = item.transform.position + new Vector3(0f, 0.35f, 0);
+			c = Color.red; //cone - why no orange r u mad
+		} 
 		var display = Instantiate(textTemplate, loc, textTemplate.transform.rotation);
-		//var display = Instantiate(textTemplate, Vector3.zero + Vector3.up, new Quaternion(0f, 0f, 0f, 0f));
-		//display.GetComponent<TextMeshPro>().text = distance.ToString();
 		display.tag = "pointText";
+		display.GetComponent<TextMeshPro>().color = c;
 		displays.Add(display);
 	}
 

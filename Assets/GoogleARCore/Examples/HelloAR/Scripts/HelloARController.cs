@@ -21,7 +21,6 @@
 using System.Configuration.Assemblies;
 using System.Linq.Expressions;
 using TMPro;
-using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
 namespace GoogleARCore.Examples.HelloAR
@@ -76,9 +75,13 @@ namespace GoogleARCore.Examples.HelloAR
         public GameObject Cam;
         public GameObject DebugSnack;
         public GameObject OriginMarker;
+        public GameObject marker;
+        public GameObject cone;
         public Transform Origin;
         public DisplacementDisplay displacement;
         public List<GameObject> rings;
+        public TMP_Dropdown ddObject;
+        
 
         /// <summary>
         /// The rotation in degrees need to apply to model when the Andy model is placed.
@@ -103,7 +106,7 @@ namespace GoogleARCore.Examples.HelloAR
         {
 
             _UpdateApplicationLifecycle();
-
+            
             // Hide snackbar when currently tracking at least one plane.
             Session.GetTrackables<DetectedPlane>(m_AllPlanes);
             bool showSearchingUI = true;
@@ -162,32 +165,65 @@ namespace GoogleARCore.Examples.HelloAR
                     }
 
                     // Instantiate Andy model at the hit pose.
-                    var andyObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
-                    //var measureRing = Instantiate(Ring, hit.Pose.position + new Vector3(0,0.05f,0), hit.Pose.rotation);
-                    var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
-                    // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
-                    andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
-                    measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
-                    //measureRing.transform.localScale = new Vector3(0.2f, 0, 0.2f);
-                    measureRing.SetActive(true);
-                    andyObject.tag = "point";
-                    measureRing.tag = "point";
-                    rings.Add(measureRing);
+                    
                     // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
                     // world evolves.
                     var anchor = hit.Trackable.CreateAnchor(hit.Pose);
-
-                    // Make Andy model a child of the anchor.
-                    andyObject.transform.parent = anchor.transform;
-                    measureRing.transform.parent = anchor.transform;
-                    //DebugSnack.GetComponent<Text>().text = "DISPLAY SUPPOSEDLY CALLED";
-                    displacement.Display(andyObject, 100f);
+                    
+                    
+                    if (ddObject.value == 0)
+                    {
+                        var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
+                        measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
+                        measureRing.SetActive(true);
+                        measureRing.tag = "point";
+                        rings.Add(measureRing);
+                        measureRing.transform.parent = anchor.transform;
+                        
+                        var andyObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
+                        // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
+                        andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
+                        //measureRing.transform.localScale = new Vector3(0.2f, 0, 0.2f);
+                        andyObject.tag = "point";
+                        // Make Andy model a child of the anchor.
+                        andyObject.transform.parent = anchor.transform;
+                        //DebugSnack.GetComponent<Text>().text = "DISPLAY SUPPOSEDLY CALLED";
+                        displacement.Display(andyObject);
+                    }
+                    else
+                    {
+                        Vector3 ConeCorrection = new Vector3(0f, 0.25f, 0f);
+                        var andyObject = Instantiate(prefab, hit.Pose.position + ConeCorrection, hit.Pose.rotation);
+                        // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
+                        andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
+                        //measureRing.transform.localScale = new Vector3(0.2f, 0, 0.2f);
+                        andyObject.tag = "point";
+                        // Make Andy model a child of the anchor.
+                        andyObject.transform.parent = anchor.transform;
+                        //DebugSnack.GetComponent<Text>().text = "DISPLAY SUPPOSEDLY CALLED";
+                        displacement.Display(andyObject);
+                    }
                 }
             }
 
             foreach (GameObject ring in rings)
             {
                 RingLookAt(ring.transform, Cam.transform);
+            }
+
+            GetSelectedPrefab();
+        }
+
+        public void GetSelectedPrefab()
+        {
+            int Selection = ddObject.value;
+            if (Selection == 0)
+            {
+                AndyPlanePrefab = marker;
+            }
+            else if (Selection == 1)
+            {
+                AndyPlanePrefab = cone;
             }
         }
 
@@ -296,7 +332,7 @@ namespace GoogleARCore.Examples.HelloAR
 
         void DebugPos()
         {
-            OriginMarker.transform.position = Origin.position;
+            //OriginMarker.transform.position = Origin.position;
             
             DebugSnack.GetComponent<Text>().text = Cam.transform.position.ToString();
         }
