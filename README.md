@@ -10,7 +10,7 @@ Superimposing objects onto the real-world, for example traffic cones on some roa
 
 * Apple Tablets/Phones
 * Android Tablets/Phones with atleast Android 7.0 installed
-** Devices supporting ARCore: https://developers.google.com/ar/discover/supported-devices
+* Devices supporting ARCore: https://developers.google.com/ar/discover/supported-devices
 
 ## Authors
 
