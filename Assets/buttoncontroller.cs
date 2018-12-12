@@ -37,7 +37,7 @@ public class buttoncontroller : MonoBehaviour {
         btnCone.DOAnchorPos(conePos, 1f);
         btnRing.DOAnchorPos(ringPos, 1f);
         btnBarrier.DOAnchorPos(barrierPos, 1f);
-        Button.gameObject.SetActive(false);
+        Button.gameObject.SetActive(true);
     }
 
     [Button("Hide")]
@@ -55,6 +55,6 @@ public class buttoncontroller : MonoBehaviour {
         {
             btnBarrier.gameObject.SetActive(false);
         });
-        Button.gameObject.SetActive(true);
+        Button.gameObject.SetActive(false);
     }
 }
