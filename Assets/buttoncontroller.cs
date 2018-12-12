@@ -15,13 +15,13 @@ public class buttoncontroller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Hide();
         conePos = btnCone.anchoredPosition;
         ringPos = btnRing.anchoredPosition;
         barrierPos = btnBarrier.anchoredPosition;
         HiddenPos = new Vector3(100f, 100f, 0f);
-		
-	}
+        Hide();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -34,24 +34,24 @@ public class buttoncontroller : MonoBehaviour {
         btnCone.gameObject.SetActive(true);
         btnRing.gameObject.SetActive(true);
         btnBarrier.gameObject.SetActive(true);
-        btnCone.DOAnchorPos(conePos, 1f);
-        btnRing.DOAnchorPos(ringPos, 1f);
-        btnBarrier.DOAnchorPos(barrierPos, 1f);
+        btnCone.DOAnchorPos(conePos, 0.4f);
+        btnRing.DOAnchorPos(ringPos, 0.4f);
+        btnBarrier.DOAnchorPos(barrierPos, 0.4f);
         Button.gameObject.SetActive(true);
     }
 
     [Button("Hide")]
     public void Hide()
     {
-        btnCone.DOAnchorPos(HiddenPos, 1f).OnComplete(() =>
+        btnCone.DOAnchorPos(HiddenPos, 0.2f).OnComplete(() =>
         {
             btnCone.gameObject.SetActive(false);
         });
-        btnRing.DOAnchorPos(HiddenPos, 1f).OnComplete(() =>
+        btnRing.DOAnchorPos(HiddenPos, 0.2f).OnComplete(() =>
         {
             btnRing.gameObject.SetActive(false);
         });
-        btnBarrier.DOAnchorPos(HiddenPos, 1f).OnComplete(() =>
+        btnBarrier.DOAnchorPos(HiddenPos, 0.2f).OnComplete(() =>
         {
             btnBarrier.gameObject.SetActive(false);
         });
