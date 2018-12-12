@@ -69,7 +69,7 @@ namespace GoogleARCore.Examples.HelloAR
         public GameObject SearchingForPlaneUI;
 
         /// <summary>
-        /// Fin's Public vars
+        /// Fin's  vars
         /// </summary>
         public GameObject Ring;
         public GameObject Cam;
@@ -77,10 +77,13 @@ namespace GoogleARCore.Examples.HelloAR
         public GameObject OriginMarker;
         public GameObject marker;
         public GameObject cone;
+        public GameObject barrier;
+        public GameObject Preset1;
         public Transform Origin;
         public DisplacementDisplay displacement;
         public List<GameObject> rings;
         public TMP_Dropdown ddObject;
+        private RaycastHit RayHit;
         
 
         /// <summary>
@@ -129,6 +132,24 @@ namespace GoogleARCore.Examples.HelloAR
             {
                 return;
             }
+            
+            //detect touch, raycast, if hit another GO return i.e. finish update
+            if (Input.touchCount >= 1)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+                DebugSnack.GetComponent<Text>().text = "RAY SENT";
+                if (Physics.Raycast(ray, out RayHit))
+                {
+                    DebugSnack.GetComponent<Text>().text = "RAY HIT";
+                    return;
+//                    if (RayHit.transform.CompareTag("Preset"))
+//                    {
+//                        DebugSnack.GetComponent<Text>().text = "HIT PRESET";
+//                        return;
+//                    }
+                }
+            }
+            
 
             //If user touched UI then do not register touch on plane underneath
             if (EventSystem.current.IsPointerOverGameObject() || EventSystem.current.currentSelectedGameObject != null)
@@ -171,7 +192,7 @@ namespace GoogleARCore.Examples.HelloAR
                     var anchor = hit.Trackable.CreateAnchor(hit.Pose);
                     
                     
-                    if (ddObject.value == 0)
+                    if (ddObject.value == 0 || ddObject.value == 3 ) //ring or preset
                     {
                         var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
                         measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
@@ -187,22 +208,34 @@ namespace GoogleARCore.Examples.HelloAR
                         andyObject.tag = "point";
                         // Make Andy model a child of the anchor.
                         andyObject.transform.parent = anchor.transform;
-                        //DebugSnack.GetComponent<Text>().text = "DISPLAY SUPPOSEDLY CALLED";
                         displacement.Display(andyObject);
                     }
+                    //else if (ddObject.value == 1)//cone
                     else
                     {
-                        Vector3 ConeCorrection = new Vector3(0f, 0.25f, 0f);
-                        var andyObject = Instantiate(prefab, hit.Pose.position + ConeCorrection, hit.Pose.rotation);
+                        Vector3 coneCorrection = new Vector3(0f, 0.25f, 0f);
+                        var andyObject = Instantiate(prefab, hit.Pose.position + coneCorrection, hit.Pose.rotation);
                         // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
                         andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
                         //measureRing.transform.localScale = new Vector3(0.2f, 0, 0.2f);
                         andyObject.tag = "point";
                         // Make Andy model a child of the anchor.
                         andyObject.transform.parent = anchor.transform;
-                        //DebugSnack.GetComponent<Text>().text = "DISPLAY SUPPOSEDLY CALLED";
                         displacement.Display(andyObject);
                     }
+//                    else if (ddObject.value == 2)//barrier
+//                    {
+//                        Quaternion barrierCorrection = new Quaternion(0f, 0f, 0f, 0f);
+//                        var andyObject = Instantiate(prefab, hit.Pose.position, barrierCorrection);
+//                        // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
+//                        //andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
+//                        andyObject.transform.Rotate(-90, k_ModelRotation, 0, Space.Self);
+//                        //measureRing.transform.localScale = new Vector3(0.2f, 0, 0.2f);
+//                        andyObject.tag = "point";
+//                        // Make Andy model a child of the anchor.
+//                        andyObject.transform.parent = anchor.transform;
+//                        displacement.Display(andyObject);
+//                    }
                 }
             }
 
@@ -224,6 +257,14 @@ namespace GoogleARCore.Examples.HelloAR
             else if (Selection == 1)
             {
                 AndyPlanePrefab = cone;
+            }
+            else if (Selection == 2)
+            {
+                AndyPlanePrefab = barrier;
+            }
+            else if (Selection == 3)
+            {
+                AndyPlanePrefab = Preset1;
             }
         }
 
@@ -334,7 +375,7 @@ namespace GoogleARCore.Examples.HelloAR
         {
             //OriginMarker.transform.position = Origin.position;
             
-            DebugSnack.GetComponent<Text>().text = Cam.transform.position.ToString();
+            //DebugSnack.GetComponent<Text>().text = Cam.transform.position.ToString();
         }
 
         public void RingLookAt(Transform ring, Transform target)

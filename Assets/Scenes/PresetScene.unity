@@ -1010,6 +1010,8 @@ MonoBehaviour:
   OriginMarker: {fileID: 1775238792}
   marker: {fileID: 1759488078947420, guid: 269c542ef59905b42a47676a2dc9aa6f, type: 2}
   cone: {fileID: 1745873536175150, guid: 6442cc585ba287d45be6cea6944a5316, type: 2}
+  barrier: {fileID: 1847637472276822, guid: 07a55245284718446ac6d20d5643fb3a, type: 2}
+  Preset1: {fileID: 1957507810826998, guid: ad6e73896eee455458defc3211798171, type: 2}
   Origin: {fileID: 85334880}
   displacement: {fileID: 627916104}
   rings: []
@@ -1268,7 +1270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &641027474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2076,6 +2078,10 @@ MonoBehaviour:
     - m_Text: Radius Rings
       m_Image: {fileID: 0}
     - m_Text: Traffic Cones
+      m_Image: {fileID: 0}
+    - m_Text: Barrier
+      m_Image: {fileID: 0}
+    - m_Text: Preset 1
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
