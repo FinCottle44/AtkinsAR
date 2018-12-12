@@ -356,6 +356,7 @@ MonoBehaviour:
   btnCone: {fileID: 1263018334}
   btnRing: {fileID: 1641757805}
   btnBarrier: {fileID: 1477021019}
+  Button: {fileID: 0}
   conePos: {x: 0, y: 0, z: 0}
   ringPos: {x: 0, y: 0, z: 0}
   barrierPos: {x: 0, y: 0, z: 0}
@@ -2042,9 +2043,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60082146}
-        m_MethodName: Play
-        m_Mode: 5
+      - m_Target: {fileID: 60082147}
+        m_MethodName: Show
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -7,7 +7,7 @@ using Sirenix.OdinInspector;
 
 public class buttoncontroller : MonoBehaviour {
 
-    public RectTransform btnCone, btnRing, btnBarrier;
+    public RectTransform btnCone, btnRing, btnBarrier, Button;
 
     public Vector3 conePos, ringPos, barrierPos;
 
@@ -15,7 +15,7 @@ public class buttoncontroller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+        Hide();
         conePos = btnCone.anchoredPosition;
         ringPos = btnRing.anchoredPosition;
         barrierPos = btnBarrier.anchoredPosition;
@@ -37,6 +37,7 @@ public class buttoncontroller : MonoBehaviour {
         btnCone.DOAnchorPos(conePos, 1f);
         btnRing.DOAnchorPos(ringPos, 1f);
         btnBarrier.DOAnchorPos(barrierPos, 1f);
+        Button.gameObject.SetActive(false);
     }
 
     [Button("Hide")]
@@ -54,5 +55,6 @@ public class buttoncontroller : MonoBehaviour {
         {
             btnBarrier.gameObject.SetActive(false);
         });
+        Button.gameObject.SetActive(true);
     }
 }
