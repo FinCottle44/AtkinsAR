@@ -34,24 +34,24 @@ public class buttoncontroller : MonoBehaviour {
         btnCone.gameObject.SetActive(true);
         btnRing.gameObject.SetActive(true);
         btnBarrier.gameObject.SetActive(true);
-        btnCone.DOAnchorPos(conePos, 0.4f);
-        btnRing.DOAnchorPos(ringPos, 0.4f);
-        btnBarrier.DOAnchorPos(barrierPos, 0.4f);
+        btnCone.DOAnchorPos(conePos, 0.5f);
+        btnRing.DOAnchorPos(ringPos, 0.5f);
+        btnBarrier.DOAnchorPos(barrierPos, 0.5f);
         Button.gameObject.SetActive(true);
     }
 
     [Button("Hide")]
     public void Hide()
     {
-        btnCone.DOAnchorPos(HiddenPos, 0.2f).OnComplete(() =>
+        btnCone.DOAnchorPos(HiddenPos, 0.3f).OnComplete(() =>
         {
             btnCone.gameObject.SetActive(false);
         });
-        btnRing.DOAnchorPos(HiddenPos, 0.2f).OnComplete(() =>
+        btnRing.DOAnchorPos(HiddenPos, 0.3f).OnComplete(() =>
         {
             btnRing.gameObject.SetActive(false);
         });
-        btnBarrier.DOAnchorPos(HiddenPos, 0.2f).OnComplete(() =>
+        btnBarrier.DOAnchorPos(HiddenPos, 0.3f).OnComplete(() =>
         {
             btnBarrier.gameObject.SetActive(false);
         });
