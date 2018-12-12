@@ -174,6 +174,7 @@ namespace GoogleARCore.Examples.HelloAR
                     
                     if (SelectionValue == 0)
                     {
+                        GetSelectedPrefab();
                         var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
                         measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
                         measureRing.SetActive(true);
@@ -193,6 +194,7 @@ namespace GoogleARCore.Examples.HelloAR
                     }
                     else
                     {
+                        GetSelectedPrefab();
                         Vector3 ConeCorrection = new Vector3(0f, 0.25f, 0f);
                         var andyObject = Instantiate(prefab, hit.Pose.position + ConeCorrection, hit.Pose.rotation);
                         // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
