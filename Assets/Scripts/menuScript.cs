@@ -8,6 +8,6 @@ public class menuScript : MonoBehaviour
 {
     public void ChangeScene()
     {
-        SceneManager.LoadScene("AtkinsAR");
+        SceneManager.LoadScene("BuildScene");
     }
 }
