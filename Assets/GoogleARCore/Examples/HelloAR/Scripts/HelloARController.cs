@@ -167,7 +167,7 @@ namespace GoogleARCore.Examples.HelloAR
 
                     // Instantiate Andy model at the hit pose.
                     
-                    // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
+                    // Create an anchor to allow ARCore  to track the hitpoint as understanding of the physical
                     // world evolves.
                     var anchor = hit.Trackable.CreateAnchor(hit.Pose);
                     
