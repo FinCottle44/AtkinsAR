@@ -81,6 +81,7 @@ namespace GoogleARCore.Examples.HelloAR
         public DisplacementDisplay displacement;
         public List<GameObject> rings;
         public TMP_Dropdown ddObject;
+        public int SelectionValue = 0;
         
 
         /// <summary>
@@ -171,7 +172,7 @@ namespace GoogleARCore.Examples.HelloAR
                     var anchor = hit.Trackable.CreateAnchor(hit.Pose);
                     
                     
-                    if (ddObject.value == 0)
+                    if (SelectionValue == 0)
                     {
                         var measureRing = Instantiate(Ring, hit.Pose.position, hit.Pose.rotation);
                         measureRing.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
@@ -216,7 +217,7 @@ namespace GoogleARCore.Examples.HelloAR
 
         public void GetSelectedPrefab()
         {
-            int Selection = ddObject.value;
+            int Selection = SelectionValue;
             if (Selection == 0)
             {
                 AndyPlanePrefab = marker;
@@ -225,6 +226,14 @@ namespace GoogleARCore.Examples.HelloAR
             {
                 AndyPlanePrefab = cone;
             }
+        }
+        public void SelectCone()
+        {
+            SelectionValue = 1;
+        }
+        public void SelectRing()
+        {
+            SelectionValue = 0;
         }
 
         /// <summary>
