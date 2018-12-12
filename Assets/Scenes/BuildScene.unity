@@ -356,7 +356,7 @@ MonoBehaviour:
   btnCone: {fileID: 1263018334}
   btnRing: {fileID: 1641757805}
   btnBarrier: {fileID: 1477021019}
-  Button: {fileID: 0}
+  Button: {fileID: 898164408}
   conePos: {x: 0, y: 0, z: 0}
   ringPos: {x: 0, y: 0, z: 0}
   barrierPos: {x: 0, y: 0, z: 0}
