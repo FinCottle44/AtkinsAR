@@ -15,10 +15,13 @@ public class buttoncontroller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        btnCone.gameObject.SetActive(false);
+        btnRing.gameObject.SetActive(false);
+        btnBarrier.gameObject.SetActive(false);
         conePos = btnCone.anchoredPosition;
         ringPos = btnRing.anchoredPosition;
         barrierPos = btnBarrier.anchoredPosition;
-        HiddenPos = new Vector3(100f, 100f, 0f);
+        HiddenPos = new Vector3(250f, 250f, 0f);
         Hide();
 
     }
