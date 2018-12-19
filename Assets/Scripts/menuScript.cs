@@ -10,4 +10,8 @@ public class menuScript : MonoBehaviour
     {
         SceneManager.LoadScene("BuildScene");
     }
+    public void ChangePresetScene()
+    {
+        SceneManager.LoadScene("PresetScene");
+    }
 }
