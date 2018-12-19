@@ -281,6 +281,10 @@ namespace GoogleARCore.Examples.HelloAR
         {
             SelectionValue = 2;
         }
+        public void SelectPreset()
+        {
+            SelectionValue = 3;
+        }
 
         /// <summary>
         /// Check and update the application lifecycle.
