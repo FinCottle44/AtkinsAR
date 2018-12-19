@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="000bfed5-baaf-41bb-8aff-8c0fe4492e9e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AtkinsAR/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AtkinsAR/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AtkinsAR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AtkinsAR/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,16 +13,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HelloARController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HelloARController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <caret line="235" column="44" lean-forward="true" selection-start-line="235" selection-start-column="44" selection-end-line="235" selection-end-column="44" />
+            <state relative-caret-position="270">
+              <caret line="136" column="16" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="37" />
               <folding>
                 <marker date="1544621209698" expanded="true" signature="0:834" ph="/* ----------------------------------------------------------------------- ... */" />
                 <marker date="1544621209698" expanded="false" signature="842:940" ph="..." />
                 <marker date="1544621209698" expanded="true" signature="981:15051" ph="{...}" />
-                <marker date="1544621209698" expanded="true" signature="994:1325" ph="..." />
+                <marker date="1544621209698" expanded="false" signature="994:1325" ph="..." />
                 <marker date="1544621209698" expanded="true" signature="1338:1408" ph="/// Controls the HelloAR example. ... " />
                 <marker date="1544621209698" expanded="true" signature="1459:15045" ph="{...}" />
                 <marker date="1544621209698" expanded="true" signature="1474:1618" ph="/// The first-person camera being used to render the passthrough camera image (i.e. AR background). ... " />
@@ -105,25 +104,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DetectTouchMovement.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DetectTouchMovement.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/DetectTouchMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+            <state relative-caret-position="225">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding>
-                <marker date="1544621210091" expanded="false" signature="6:44" ph="..." />
-                <marker date="1544621210091" expanded="true" signature="304:388" ph="///   The delta of the angle between two touch points ... " />
-                <marker date="1544621210091" expanded="true" signature="427:498" ph="///   The angle between two touch points ... " />
-                <marker date="1544621210091" expanded="true" signature="534:658" ph="///   The delta of the distance between two touch points that were distancing from each other ... " />
-                <marker date="1544621210091" expanded="true" signature="701:812" ph="///   The distance between two touch points that were distancing from each other ... " />
-                <marker date="1544621210091" expanded="true" signature="852:954" ph="///   Calculates Pinch and Turn - This should be used inside LateUpdate ... " />
-                <marker date="1544621210091" expanded="true" signature="988:2471" ph="{...}" />
-                <marker date="1544621210091" expanded="true" signature="1162:2468" ph="{...}" />
-                <marker date="1544621210091" expanded="true" signature="1359:2464" ph="{...}" />
-                <marker date="1544621210091" expanded="true" signature="1833:1879" ph="{...}" />
-                <marker date="1544621210091" expanded="true" signature="2363:2409" ph="{...}" />
-                <marker date="1544621210091" expanded="true" signature="2531:2763" ph="{...}" />
-                <marker date="1544621210091" expanded="true" signature="2709:2741" ph="{...}" />
+                <marker date="1545213432371" expanded="false" signature="6:44" ph="..." />
+                <marker date="1545213432371" expanded="true" signature="96:2768" ph="{...}" />
+                <marker date="1545213432371" expanded="true" signature="304:388" ph="///   The delta of the angle between two touch points ... " />
+                <marker date="1545213432371" expanded="true" signature="427:498" ph="///   The angle between two touch points ... " />
+                <marker date="1545213432371" expanded="true" signature="535:659" ph="///   The delta of the distance between two touch points that were distancing from each other ... " />
+                <marker date="1545213432371" expanded="true" signature="702:813" ph="///   The distance between two touch points that were distancing from each other ... " />
+                <marker date="1545213432371" expanded="true" signature="854:956" ph="///   Calculates Pinch and Turn - This should be used inside LateUpdate ... " />
+                <marker date="1545213432371" expanded="true" signature="990:2473" ph="{...}" />
+                <marker date="1545213432371" expanded="true" signature="1164:2470" ph="{...}" />
+                <marker date="1545213432371" expanded="true" signature="1361:2466" ph="{...}" />
+                <marker date="1545213432371" expanded="true" signature="1835:1881" ph="{...}" />
+                <marker date="1545213432371" expanded="true" signature="2365:2411" ph="{...}" />
+                <marker date="1545213432371" expanded="true" signature="2533:2765" ph="{...}" />
+                <marker date="1545213432371" expanded="true" signature="2711:2743" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -132,14 +132,19 @@
       <file leaf-file-name="PresetManipulation.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/PresetManipulation.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+            <state relative-caret-position="204">
+              <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
               <folding>
-                <marker date="1544621210056" expanded="true" signature="6:78" ph="..." />
-                <marker date="1544621210056" expanded="true" signature="127:767" ph="{...}" />
-                <marker date="1544621210056" expanded="true" signature="149:765" ph="{...}" />
-                <marker date="1544621210056" expanded="true" signature="326:402" ph="{...}" />
-                <marker date="1544621210056" expanded="true" signature="460:629" ph="{...}" />
+                <marker date="1545213414551" expanded="false" signature="6:78" ph="..." />
+                <marker date="1545213414551" expanded="true" signature="127:1275" ph="{...}" />
+                <marker date="1545213414551" expanded="true" signature="211:231" ph="{...}" />
+                <marker date="1545213414551" expanded="true" signature="252:1273" ph="{...}" />
+                <marker date="1545213414551" expanded="true" signature="429:505" ph="{...}" />
+                <marker date="1545213414551" expanded="true" signature="563:732" ph="{...}" />
+                <marker date="1545213414551" expanded="true" signature="895:1269" ph="{...}" />
+                <marker date="1545213414551" expanded="true" signature="976:1005" ph="{...}" />
+                <marker date="1545213414551" expanded="true" signature="1028:1079" ph="{...}" />
+                <marker date="1545213414551" expanded="true" signature="1130:1265" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -148,8 +153,19 @@
       <file leaf-file-name="DisplacementDisplay.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/DisplacementDisplay.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="405">
               <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding>
+                <marker date="1544016435343" expanded="false" signature="6:127" ph="..." />
+                <marker date="1544016435343" expanded="true" signature="177:1502" ph="{...}" />
+                <marker date="1544016435343" expanded="true" signature="379:772" ph="{...}" />
+                <marker date="1544016435343" expanded="true" signature="416:769" ph="{...}" />
+                <marker date="1544016435343" expanded="true" signature="459:765" ph="{...}" />
+                <marker date="1544016435343" expanded="true" signature="811:1301" ph="{...}" />
+                <marker date="1544016435343" expanded="true" signature="887:986" ph="{...}" />
+                <marker date="1544016435343" expanded="true" signature="994:1113" ph="{...}" />
+                <marker date="1544016435343" expanded="true" signature="1333:1500" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,6 +182,7 @@
       <find>debugsna</find>
       <find>DEBUG</find>
       <find>value</find>
+      <find>touch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,12 +190,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/GoogleARCore/SDK/Scripts/Api/HitTestApi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/colorPicker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DetectTouchMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DragMarker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DisplacementDisplay.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PresetManipulation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/colorPicker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DetectTouchMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DragMarker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DisplacementDisplay.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PresetManipulation.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -186,9 +203,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DisplacementDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DragMarker.cs" />
         <option value="$PROJECT_DIR$/Assets/colorPicker.cs" />
+        <option value="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DetectTouchMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/PresetManipulation.cs" />
-        <option value="$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs" />
       </list>
     </option>
   </component>
@@ -213,7 +230,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -230,6 +246,7 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,11 +288,12 @@
       <workItem from="1544002456417" duration="279000" />
       <workItem from="1544610543647" duration="7351000" />
       <workItem from="1544703087451" duration="29000" />
+      <workItem from="1545212377314" duration="1323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21469000" />
+    <option name="totallyTimeSpent" value="22792000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -298,16 +316,16 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15885799" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" order="8" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Unity" order="8" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -325,13 +343,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3510">
-          <caret line="237" column="23" selection-start-line="237" selection-start-column="23" selection-end-line="237" selection-end-column="23" />
+        <state relative-caret-position="3480">
+          <caret line="235" column="44" lean-forward="true" selection-start-line="235" selection-start-column="44" selection-end-line="235" selection-end-column="44" />
           <folding>
             <marker date="1544621209698" expanded="true" signature="0:834" ph="/* ----------------------------------------------------------------------- ... */" />
             <marker date="1544621209698" expanded="false" signature="842:940" ph="..." />
             <marker date="1544621209698" expanded="true" signature="981:15051" ph="{...}" />
-            <marker date="1544621209698" expanded="true" signature="994:1325" ph="..." />
+            <marker date="1544621209698" expanded="false" signature="994:1325" ph="..." />
             <marker date="1544621209698" expanded="true" signature="1338:1408" ph="/// Controls the HelloAR example. ... " />
             <marker date="1544621209698" expanded="true" signature="1459:15045" ph="{...}" />
             <marker date="1544621209698" expanded="true" signature="1474:1618" ph="/// The first-person camera being used to render the passthrough camera image (i.e. AR background). ... " />
@@ -413,19 +431,20 @@
         <state relative-caret-position="1260">
           <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
           <folding>
-            <marker date="1544621210091" expanded="false" signature="6:44" ph="..." />
-            <marker date="1544621210091" expanded="true" signature="304:388" ph="///   The delta of the angle between two touch points ... " />
-            <marker date="1544621210091" expanded="true" signature="427:498" ph="///   The angle between two touch points ... " />
-            <marker date="1544621210091" expanded="true" signature="534:658" ph="///   The delta of the distance between two touch points that were distancing from each other ... " />
-            <marker date="1544621210091" expanded="true" signature="701:812" ph="///   The distance between two touch points that were distancing from each other ... " />
-            <marker date="1544621210091" expanded="true" signature="852:954" ph="///   Calculates Pinch and Turn - This should be used inside LateUpdate ... " />
-            <marker date="1544621210091" expanded="true" signature="988:2471" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="1162:2468" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="1359:2464" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="1833:1879" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="2363:2409" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="2531:2763" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="2709:2741" ph="{...}" />
+            <marker date="1545213432371" expanded="false" signature="6:44" ph="..." />
+            <marker date="1545213432371" expanded="true" signature="96:2768" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="304:388" ph="///   The delta of the angle between two touch points ... " />
+            <marker date="1545213432371" expanded="true" signature="427:498" ph="///   The angle between two touch points ... " />
+            <marker date="1545213432371" expanded="true" signature="535:659" ph="///   The delta of the distance between two touch points that were distancing from each other ... " />
+            <marker date="1545213432371" expanded="true" signature="702:813" ph="///   The distance between two touch points that were distancing from each other ... " />
+            <marker date="1545213432371" expanded="true" signature="854:956" ph="///   Calculates Pinch and Turn - This should be used inside LateUpdate ... " />
+            <marker date="1545213432371" expanded="true" signature="990:2473" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="1164:2470" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="1361:2466" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="1835:1881" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="2365:2411" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="2533:2765" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="2711:2743" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -435,11 +454,161 @@
         <state relative-caret-position="495">
           <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
           <folding>
-            <marker date="1544621210056" expanded="true" signature="6:78" ph="..." />
-            <marker date="1544621210056" expanded="true" signature="127:767" ph="{...}" />
-            <marker date="1544621210056" expanded="true" signature="149:765" ph="{...}" />
-            <marker date="1544621210056" expanded="true" signature="326:402" ph="{...}" />
-            <marker date="1544621210056" expanded="true" signature="460:629" ph="{...}" />
+            <marker date="1545213414551" expanded="false" signature="6:78" ph="..." />
+            <marker date="1545213414551" expanded="true" signature="127:1275" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="211:231" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="252:1273" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="429:505" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="563:732" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="895:1269" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="976:1005" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="1028:1079" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="1130:1265" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DisplacementDisplay.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <marker date="1544016435343" expanded="false" signature="6:127" ph="..." />
+            <marker date="1544016435343" expanded="true" signature="177:1502" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="379:772" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="416:769" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="459:765" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="811:1301" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="887:986" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="994:1113" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="1333:1500" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3510">
+          <caret line="237" column="23" selection-start-line="237" selection-start-column="23" selection-end-line="237" selection-end-column="23" />
+          <folding>
+            <marker date="1544621209698" expanded="true" signature="0:834" ph="/* ----------------------------------------------------------------------- ... */" />
+            <marker date="1544621209698" expanded="false" signature="842:940" ph="..." />
+            <marker date="1544621209698" expanded="true" signature="981:15051" ph="{...}" />
+            <marker date="1544621209698" expanded="false" signature="994:1325" ph="..." />
+            <marker date="1544621209698" expanded="true" signature="1338:1408" ph="/// Controls the HelloAR example. ... " />
+            <marker date="1544621209698" expanded="true" signature="1459:15045" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="1474:1618" ph="/// The first-person camera being used to render the passthrough camera image (i.e. AR background). ... " />
+            <marker date="1544621209698" expanded="true" signature="1669:1772" ph="/// A prefab for tracking and visualizing detected planes. ... " />
+            <marker date="1544621209698" expanded="true" signature="1829:1941" ph="/// A model to place when a raycast from a user touch hits a plane. ... " />
+            <marker date="1544621209698" expanded="true" signature="1994:2114" ph="/// A model to place when a raycast from a user touch hits a feature point. ... " />
+            <marker date="1544621209698" expanded="true" signature="2167:2293" ph="/// A gameobject parenting UI for displaying the &quot;searching for planes&quot; snackbar. ... " />
+            <marker date="1544621209698" expanded="true" signature="2350:2410" ph="/// Fin's  vars ... " />
+            <marker date="1544621209698" expanded="true" signature="2900:3026" ph="/// The rotation in degrees need to apply to model when the Andy model is placed. ... " />
+            <marker date="1544621209698" expanded="true" signature="3090:3292" ph="/// A list to hold all planes ARCore is tracking in the current frame. This object is used across ... " />
+            <marker date="1544621209698" expanded="true" signature="3379:3525" ph="/// True if the app is in the process of quitting due to an ARCore connection error, otherwise false. ... " />
+            <marker date="1544621209698" expanded="true" signature="3578:3653" ph="/// The Unity Update() method. ... " />
+            <marker date="1544621209698" expanded="true" signature="3682:10384" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="3982:4194" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="4072:4180" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="4512:4564" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="4697:5290" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="4916:5276" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="5033:5258" ph="/* if (RayHit.transform.CompareTag(&quot;Preset&quot;)) ... */" />
+            <marker date="1544621209698" expanded="true" signature="5504:5556" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="5926:10205" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="5957:6098" ph="/* Use hit pose and camera pose to check if hittest is from the ... */" />
+            <marker date="1544621209698" expanded="true" signature="6305:6416" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="6437:10191" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="6626:6720" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="6745:6839" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="6861:7073" ph="/* Instantiate Andy model at the hit pose. ... */" />
+            <marker date="1544621209698" expanded="true" signature="7272:8384" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="8467:9235" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="9236:10173" ph="/* else if (ddObject.value == 2)//barrier ... */" />
+            <marker date="1544621209698" expanded="true" signature="10253:10340" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="10425:10912" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="10511:10581" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="10618:10686" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="10723:10794" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="10831:10902" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="10922:11014" ph="/// Check and update the application lifecycle. ... " />
+            <marker date="1544621209698" expanded="true" signature="11065:12372" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="11184:11248" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="11372:11521" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="11538:11629" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="11660:11712" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="11890:12094" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="12141:12362" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="12382:12461" ph="/// Actually quit the application. ... " />
+            <marker date="1544621209698" expanded="true" signature="12492:12544" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="12554:12712" ph="/// Show an Android toast message. ... " />
+            <marker date="1544621209698" expanded="true" signature="12774:13484" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="13030:13474" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="13218:13457" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="13513:13939" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="13634:13691" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="13809:13929" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="13981:14496" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="14253:14486" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="14523:14709" ph="{...}" />
+            <marker date="1544621209698" expanded="true" signature="14546:14699" ph="/* OriginMarker.transform.position = Origin.position; ... */" />
+            <marker date="1544621209698" expanded="true" signature="14775:15039" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DragMarker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/colorPicker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DetectTouchMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+          <folding>
+            <marker date="1545213432371" expanded="false" signature="6:44" ph="..." />
+            <marker date="1545213432371" expanded="true" signature="96:2768" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="304:388" ph="///   The delta of the angle between two touch points ... " />
+            <marker date="1545213432371" expanded="true" signature="427:498" ph="///   The angle between two touch points ... " />
+            <marker date="1545213432371" expanded="true" signature="535:659" ph="///   The delta of the distance between two touch points that were distancing from each other ... " />
+            <marker date="1545213432371" expanded="true" signature="702:813" ph="///   The distance between two touch points that were distancing from each other ... " />
+            <marker date="1545213432371" expanded="true" signature="854:956" ph="///   Calculates Pinch and Turn - This should be used inside LateUpdate ... " />
+            <marker date="1545213432371" expanded="true" signature="990:2473" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="1164:2470" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="1361:2466" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="1835:1881" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="2365:2411" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="2533:2765" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="2711:2743" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/PresetManipulation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <folding>
+            <marker date="1545213414551" expanded="false" signature="6:78" ph="..." />
+            <marker date="1545213414551" expanded="true" signature="127:1275" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="211:231" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="252:1273" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="429:505" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="563:732" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="895:1269" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="976:1005" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="1028:1079" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="1130:1265" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -459,7 +628,7 @@
             <marker date="1544621209698" expanded="true" signature="0:834" ph="/* ----------------------------------------------------------------------- ... */" />
             <marker date="1544621209698" expanded="false" signature="842:940" ph="..." />
             <marker date="1544621209698" expanded="true" signature="981:15051" ph="{...}" />
-            <marker date="1544621209698" expanded="true" signature="994:1325" ph="..." />
+            <marker date="1544621209698" expanded="false" signature="994:1325" ph="..." />
             <marker date="1544621209698" expanded="true" signature="1338:1408" ph="/// Controls the HelloAR example. ... " />
             <marker date="1544621209698" expanded="true" signature="1459:15045" ph="{...}" />
             <marker date="1544621209698" expanded="true" signature="1474:1618" ph="/// The first-person camera being used to render the passthrough camera image (i.e. AR background). ... " />
@@ -551,7 +720,7 @@
             <marker date="1544621209698" expanded="true" signature="0:834" ph="/* ----------------------------------------------------------------------- ... */" />
             <marker date="1544621209698" expanded="false" signature="842:940" ph="..." />
             <marker date="1544621209698" expanded="true" signature="981:15051" ph="{...}" />
-            <marker date="1544621209698" expanded="true" signature="994:1325" ph="..." />
+            <marker date="1544621209698" expanded="false" signature="994:1325" ph="..." />
             <marker date="1544621209698" expanded="true" signature="1338:1408" ph="/// Controls the HelloAR example. ... " />
             <marker date="1544621209698" expanded="true" signature="1459:15045" ph="{...}" />
             <marker date="1544621209698" expanded="true" signature="1474:1618" ph="/// The first-person camera being used to render the passthrough camera image (i.e. AR background). ... " />
@@ -636,7 +805,7 @@
             <marker date="1544621209698" expanded="true" signature="0:834" ph="/* ----------------------------------------------------------------------- ... */" />
             <marker date="1544621209698" expanded="false" signature="842:940" ph="..." />
             <marker date="1544621209698" expanded="true" signature="981:15051" ph="{...}" />
-            <marker date="1544621209698" expanded="true" signature="994:1325" ph="..." />
+            <marker date="1544621209698" expanded="false" signature="994:1325" ph="..." />
             <marker date="1544621209698" expanded="true" signature="1338:1408" ph="/// Controls the HelloAR example. ... " />
             <marker date="1544621209698" expanded="true" signature="1459:15045" ph="{...}" />
             <marker date="1544621209698" expanded="true" signature="1474:1618" ph="/// The first-person camera being used to render the passthrough camera image (i.e. AR background). ... " />
@@ -706,7 +875,7 @@
             <marker date="1544621209698" expanded="true" signature="0:834" ph="/* ----------------------------------------------------------------------- ... */" />
             <marker date="1544621209698" expanded="false" signature="842:940" ph="..." />
             <marker date="1544621209698" expanded="true" signature="981:15051" ph="{...}" />
-            <marker date="1544621209698" expanded="true" signature="994:1325" ph="..." />
+            <marker date="1544621209698" expanded="false" signature="994:1325" ph="..." />
             <marker date="1544621209698" expanded="true" signature="1338:1408" ph="/// Controls the HelloAR example. ... " />
             <marker date="1544621209698" expanded="true" signature="1459:15045" ph="{...}" />
             <marker date="1544621209698" expanded="true" signature="1474:1618" ph="/// The first-person camera being used to render the passthrough camera image (i.e. AR background). ... " />
@@ -776,13 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DisplacementDisplay.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/DragMarker.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -797,51 +959,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DetectTouchMovement.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DisplacementDisplay.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+        <state relative-caret-position="405">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
           <folding>
-            <marker date="1544621210091" expanded="false" signature="6:44" ph="..." />
-            <marker date="1544621210091" expanded="true" signature="304:388" ph="///   The delta of the angle between two touch points ... " />
-            <marker date="1544621210091" expanded="true" signature="427:498" ph="///   The angle between two touch points ... " />
-            <marker date="1544621210091" expanded="true" signature="534:658" ph="///   The delta of the distance between two touch points that were distancing from each other ... " />
-            <marker date="1544621210091" expanded="true" signature="701:812" ph="///   The distance between two touch points that were distancing from each other ... " />
-            <marker date="1544621210091" expanded="true" signature="852:954" ph="///   Calculates Pinch and Turn - This should be used inside LateUpdate ... " />
-            <marker date="1544621210091" expanded="true" signature="988:2471" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="1162:2468" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="1359:2464" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="1833:1879" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="2363:2409" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="2531:2763" ph="{...}" />
-            <marker date="1544621210091" expanded="true" signature="2709:2741" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PresetManipulation.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-          <folding>
-            <marker date="1544621210056" expanded="true" signature="6:78" ph="..." />
-            <marker date="1544621210056" expanded="true" signature="127:767" ph="{...}" />
-            <marker date="1544621210056" expanded="true" signature="149:765" ph="{...}" />
-            <marker date="1544621210056" expanded="true" signature="326:402" ph="{...}" />
-            <marker date="1544621210056" expanded="true" signature="460:629" ph="{...}" />
+            <marker date="1544016435343" expanded="false" signature="6:127" ph="..." />
+            <marker date="1544016435343" expanded="true" signature="177:1502" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="379:772" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="416:769" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="459:765" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="811:1301" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="887:986" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="994:1113" ph="{...}" />
+            <marker date="1544016435343" expanded="true" signature="1333:1500" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/GoogleARCore/Examples/HelloAR/Scripts/HelloARController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="235" column="44" lean-forward="true" selection-start-line="235" selection-start-column="44" selection-end-line="235" selection-end-column="44" />
+        <state relative-caret-position="270">
+          <caret line="136" column="16" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="37" />
           <folding>
             <marker date="1544621209698" expanded="true" signature="0:834" ph="/* ----------------------------------------------------------------------- ... */" />
             <marker date="1544621209698" expanded="false" signature="842:940" ph="..." />
             <marker date="1544621209698" expanded="true" signature="981:15051" ph="{...}" />
-            <marker date="1544621209698" expanded="true" signature="994:1325" ph="..." />
+            <marker date="1544621209698" expanded="false" signature="994:1325" ph="..." />
             <marker date="1544621209698" expanded="true" signature="1338:1408" ph="/// Controls the HelloAR example. ... " />
             <marker date="1544621209698" expanded="true" signature="1459:15045" ph="{...}" />
             <marker date="1544621209698" expanded="true" signature="1474:1618" ph="/// The first-person camera being used to render the passthrough camera image (i.e. AR background). ... " />
@@ -900,6 +1044,48 @@
             <marker date="1544621209698" expanded="true" signature="14523:14709" ph="{...}" />
             <marker date="1544621209698" expanded="true" signature="14546:14699" ph="/* OriginMarker.transform.position = Origin.position; ... */" />
             <marker date="1544621209698" expanded="true" signature="14775:15039" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/PresetManipulation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+          <folding>
+            <marker date="1545213414551" expanded="false" signature="6:78" ph="..." />
+            <marker date="1545213414551" expanded="true" signature="127:1275" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="211:231" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="252:1273" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="429:505" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="563:732" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="895:1269" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="976:1005" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="1028:1079" ph="{...}" />
+            <marker date="1545213414551" expanded="true" signature="1130:1265" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DetectTouchMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <marker date="1545213432371" expanded="false" signature="6:44" ph="..." />
+            <marker date="1545213432371" expanded="true" signature="96:2768" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="304:388" ph="///   The delta of the angle between two touch points ... " />
+            <marker date="1545213432371" expanded="true" signature="427:498" ph="///   The angle between two touch points ... " />
+            <marker date="1545213432371" expanded="true" signature="535:659" ph="///   The delta of the distance between two touch points that were distancing from each other ... " />
+            <marker date="1545213432371" expanded="true" signature="702:813" ph="///   The distance between two touch points that were distancing from each other ... " />
+            <marker date="1545213432371" expanded="true" signature="854:956" ph="///   Calculates Pinch and Turn - This should be used inside LateUpdate ... " />
+            <marker date="1545213432371" expanded="true" signature="990:2473" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="1164:2470" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="1361:2466" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="1835:1881" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="2365:2411" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="2533:2765" ph="{...}" />
+            <marker date="1545213432371" expanded="true" signature="2711:2743" ph="{...}" />
           </folding>
         </state>
       </provider>

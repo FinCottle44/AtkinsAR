@@ -228,6 +228,7 @@
                 <e p="AntialiasingEditor.cs" t="Include" />
                 <e p="BloomAndFlaresEditor.cs" t="Include" />
                 <e p="BloomEditor.cs" t="Include" />
+                <e p="CameraMotionBlurEditor.cs" t="Include" />
                 <e p="ColorCorrectionCurvesEditor.cs" t="Include" />
                 <e p="ColorCorrectionLookupEditor.cs" t="Include" />
                 <e p="DepthOfFieldDeprecatedEditor.cs" t="Include" />
