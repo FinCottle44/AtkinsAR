@@ -23,7 +23,7 @@ public class buttoncontroller : MonoBehaviour
         conePos = btnCone.anchoredPosition;
         ringPos = btnRing.anchoredPosition;
         barrierPos = btnBarrier.anchoredPosition;
-        HiddenPos = new Vector3(250f, 250f, 0f);
+        HiddenPos = new Vector3(0f, 0f, 0f);
         Hide();
 
     }
