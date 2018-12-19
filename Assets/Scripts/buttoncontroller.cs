@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
-using Sirenix.OdinInspector;
+//using Sirenix.OdinInspector;
 
 public class buttoncontroller : MonoBehaviour
 {
@@ -34,7 +34,7 @@ public class buttoncontroller : MonoBehaviour
 
     }
 
-    [Button("Show")]
+    //[Button("Show")]
     public void Show()
     {
         btnCone.gameObject.SetActive(true);
@@ -46,7 +46,7 @@ public class buttoncontroller : MonoBehaviour
         Button.gameObject.SetActive(true);
     }
 
-    [Button("Hide")]
+    //[Button("Hide")]
     public void Hide()
     {
         btnCone.DOAnchorPos(HiddenPos, 0.3f).OnComplete(() =>
