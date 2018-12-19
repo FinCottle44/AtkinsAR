@@ -13,9 +13,10 @@ public class DisplacementDisplay : MonoBehaviour
 	public Camera cam;
 	public Text DebugSnack;
 	public TMP_Dropdown ddObject;
-	
-	// Update is called once per frame
-	void Update () {
+    public GoogleARCore.Examples.HelloAR.HelloARController helloAR;
+
+    // Update is called once per frame
+    void Update () {
 		foreach (var display in displays)
 		{
 			if (!display.CompareTag("cleared"))
@@ -33,7 +34,7 @@ public class DisplacementDisplay : MonoBehaviour
 	{
 		Vector3 loc;
 		Color c;
-		if (ddObject.value == 0)//if marker NOT CONE
+		if (helloAR.SelectionValue == 0)//if marker NOT CONE
 		{ 
 			loc = item.transform.position + new Vector3(0f, 0.3f, 0);
 			c = Color.white; //marker
