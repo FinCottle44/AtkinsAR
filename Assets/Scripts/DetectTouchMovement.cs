@@ -14,25 +14,25 @@ public class DetectTouchMovement : MonoBehaviour {
 	/// <summary>
 	///   The delta of the angle between two touch points
 	/// </summary>
-	static public float turnAngleDelta;
+	public static float turnAngleDelta;
 	/// <summary>
 	///   The angle between two touch points
 	/// </summary>
-	static public float turnAngle;
+	private static float turnAngle;
  
 	/// <summary>
 	///   The delta of the distance between two touch points that were distancing from each other
 	/// </summary>
-	static public float pinchDistanceDelta;
+	public static float pinchDistanceDelta;
 	/// <summary>
 	///   The distance between two touch points that were distancing from each other
 	/// </summary>
-	static public float pinchDistance;
+	private static float pinchDistance;
  
 	/// <summary>
 	///   Calculates Pinch and Turn - This should be used inside LateUpdate
 	/// </summary>
-	static public void Calculate () {
+	public static void Calculate () {
 		pinchDistance = pinchDistanceDelta = 0;
 		turnAngle = turnAngleDelta = 0;
  
@@ -72,7 +72,7 @@ public class DetectTouchMovement : MonoBehaviour {
 		}
 	}
  
-	static private float Angle (Vector2 pos1, Vector2 pos2) {
+	private static float Angle (Vector2 pos1, Vector2 pos2) {
 		Vector2 from = pos2 - pos1;
 		Vector2 to = new Vector2(1, 0);
  
@@ -84,5 +84,5 @@ public class DetectTouchMovement : MonoBehaviour {
 		}
  
 		return result;
-	}
+	}	
 }

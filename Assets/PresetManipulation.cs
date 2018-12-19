@@ -5,6 +5,17 @@ using UnityEngine;
 public class PresetManipulation : MonoBehaviour
 {
 
+	int TapCount;
+	public float MaxDubTapTime;
+	float NewTime;
+
+	
+	
+	void Start () {
+		TapCount = 0;
+	}
+
+
 	void LateUpdate()
 	{
 		float pinchAmount = 0;
@@ -30,5 +41,30 @@ public class PresetManipulation : MonoBehaviour
 		// not so sure those will work:
 		transform.rotation = desiredRotation;
 		//transform.position += Vector3.forward * pinchAmount;
+
+		if (Input.touchCount == 1)
+		{
+			Touch touch = Input.GetTouch(0);
+
+			if (touch.phase == TouchPhase.Ended)
+			{
+				TapCount += 1;
+			}
+
+			if (TapCount == 1)
+			{
+				NewTime = Time.time + MaxDubTapTime;
+			}
+			else if (TapCount == 2 && Time.time <= NewTime)
+			{
+
+				//Whatever you want after a dubble tap    
+				print("Dubble tap");
+				gameObject.SetActive(false);
+
+				TapCount = 0;
+			}
+		}
+
 	}
 }
