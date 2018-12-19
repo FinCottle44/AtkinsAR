@@ -178,10 +178,12 @@ namespace GoogleARCore.Examples.HelloAR
                     GameObject prefab;
                     if (hit.Trackable is FeaturePoint)
                     {
+                        GetSelectedPrefab();
                         prefab = AndyPointPrefab;
                     }
                     else
                     {
+                        GetSelectedPrefab();
                         prefab = AndyPlanePrefab;
                     }
 
@@ -244,7 +246,6 @@ namespace GoogleARCore.Examples.HelloAR
                 RingLookAt(ring.transform, Cam.transform);
             }
 
-            GetSelectedPrefab();
         }
 
         public void GetSelectedPrefab()
