@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PresetScene.unity
     guid: 05d89b13e8b5f424d87a16f7e6fe114f
+  - enabled: 1
+    path: Assets/Scenes/menuScene2.unity
+    guid: 246534c5008ba1f43b0b64bec402604c
   m_configObjects: {}

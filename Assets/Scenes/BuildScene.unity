@@ -2261,7 +2261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 275, y: 590}
+  m_AnchoredPosition: {x: 376, y: -291}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1689674178
@@ -2370,9 +2370,11 @@ MonoBehaviour:
   btnRing: {fileID: 1076650776}
   btnBarrier: {fileID: 1086158184}
   Button: {fileID: 1129104550}
+  btnPreset: {fileID: 0}
   conePos: {x: 0, y: 0, z: 0}
   ringPos: {x: 0, y: 0, z: 0}
   barrierPos: {x: 0, y: 0, z: 0}
+  presetPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1738101780
 GameObject:
   m_ObjectHideFlags: 0
