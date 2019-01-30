@@ -1126,7 +1126,7 @@ GameObject:
   - component: {fileID: 627916104}
   - component: {fileID: 627916105}
   m_Layer: 0
-  m_Name: Example Controller
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   FirstPersonCamera: {fileID: 896679035}
   DetectedPlanePrefab: {fileID: 1654175882956584, guid: 6a35c744e5010405c847fad90282d2be,
     type: 3}
-  AndyPlanePrefab: {fileID: 1759488078947420, guid: 269c542ef59905b42a47676a2dc9aa6f,
+  AndyPlanePrefab: {fileID: 6101859193724646511, guid: 3f54a5c23d51a05489785494e1e1020d,
     type: 3}
   AndyPointPrefab: {fileID: 1190091649889860, guid: b27e8d7fe70df464188ea5dcf2af0bb3,
     type: 3}
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   Cam: {fileID: 1461386237}
   DebugSnack: {fileID: 526621697}
   OriginMarker: {fileID: 1775238792}
-  marker: {fileID: 1759488078947420, guid: 269c542ef59905b42a47676a2dc9aa6f, type: 3}
+  marker: {fileID: 6101859193724646511, guid: 3f54a5c23d51a05489785494e1e1020d, type: 3}
   cone: {fileID: 1745873536175150, guid: 6442cc585ba287d45be6cea6944a5316, type: 3}
   barrier: {fileID: 1847637472276822, guid: 07a55245284718446ac6d20d5643fb3a, type: 3}
   Preset1: {fileID: 1957507810826998, guid: ad6e73896eee455458defc3211798171, type: 3}
@@ -1195,6 +1195,7 @@ MonoBehaviour:
   cam: {fileID: 896679035}
   DebugSnack: {fileID: 526621699}
   ddObject: {fileID: 925766559}
+  helloAR: {fileID: 0}
 --- !u!114 &627916105
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,11 +5,10 @@ using UnityEngine;
 public class PresetManipulation : MonoBehaviour
 {
 
-	int TapCount;
 	public float MaxDubTapTime;
-	float NewTime;
-
 	
+	private int TapCount;
+	private float NewTime;
 	
 	void Start () {
 		TapCount = 0;
@@ -59,7 +58,8 @@ public class PresetManipulation : MonoBehaviour
 			{
 
 				//Whatever you want after a dubble tap    
-				print("Dubble tap");
+				
+				
 				gameObject.SetActive(false);
 
 				TapCount = 0;
