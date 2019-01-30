@@ -20,11 +20,14 @@ public class buttoncontroller : MonoBehaviour
         btnCone.gameObject.SetActive(false);
         btnRing.gameObject.SetActive(false);
         btnBarrier.gameObject.SetActive(false);
-        btnPreset.gameObject.SetActive(false);
+        if (btnPreset != null)
+        {
+            btnPreset.gameObject.SetActive(false);
+            presetPos = btnPreset.anchoredPosition;
+        }
         conePos = btnCone.anchoredPosition;
         ringPos = btnRing.anchoredPosition;
         barrierPos = btnBarrier.anchoredPosition;
-        presetPos = btnPreset.anchoredPosition;
         HiddenPos = new Vector3(0f, 0f, 0f);
         Hide();
 

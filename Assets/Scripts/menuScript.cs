@@ -18,4 +18,8 @@ public class menuScript : MonoBehaviour
     {
         SceneManager.LoadScene("menuScene2");
     }
+    public void BackButton()
+    {
+        SceneManager.LoadScene("menuScene");
+    }
 }

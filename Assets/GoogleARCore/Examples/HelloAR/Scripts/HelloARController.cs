@@ -49,14 +49,14 @@ namespace GoogleARCore.Examples.HelloAR
         public Camera FirstPersonCamera;
 
         /// <summary>
-        /// A prefab for tracking and visualizing detected planes.
+        /// A prefab for tracking and visualizing det    ected planes.
         /// </summary>
         public GameObject DetectedPlanePrefab;
 
         /// <summary>
         /// A model to place when a raycast from a user touch hits a plane.
         /// </summary>
-        public GameObject AndyPlanePrefab;
+        public GameObject selectedObject;
 
         /// <summary>
         /// A model to place when a raycast from a user touch hits a feature point.
@@ -184,7 +184,7 @@ namespace GoogleARCore.Examples.HelloAR
                     else
                     {
                         GetSelectedPrefab();
-                        prefab = AndyPlanePrefab;
+                        prefab = selectedObject;
                     }
 
                     // Instantiate Andy model at the hit pose.
@@ -253,19 +253,19 @@ namespace GoogleARCore.Examples.HelloAR
             int Selection = SelectionValue;
             if (Selection == 0)
             {
-                AndyPlanePrefab = marker;
+                selectedObject = marker;
             }
             else if (Selection == 1)
             {
-                AndyPlanePrefab = cone;
+                selectedObject = cone;
             }
             else if (Selection == 2)
             {
-                AndyPlanePrefab = barrier;
+                selectedObject = barrier;
             }
             else if (Selection == 3)
             {
-                AndyPlanePrefab = Preset1;
+                selectedObject = Preset1;
             }
         }
 

@@ -29,11 +29,11 @@ public class colorPicker : MonoBehaviour
 		b = Random.Range(0f, 1f);
 
 		col = new Color(r, g, b);
-		foreach (Transform child in transform.GetComponentsInChildren<Transform>())
-		{
-			GameObject childGO = child.gameObject;
-			childGO.GetComponent<Renderer>().material.color = col;
-		}		
-		//gameObject.GetComponent<MeshRenderer>().material.color = col;
+//		foreach (Transform child in transform.GetComponentsInChildren<Transform>())
+//		{
+//			GameObject childGO = child.gameObject;
+//			childGO.GetComponent<Renderer>().material.color = col;
+//		}		
+//		//gameObject.GetComponent<MeshRenderer>().material.color = col;
 	}
 }
