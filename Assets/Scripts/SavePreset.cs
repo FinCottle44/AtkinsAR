@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Xml.Linq;
 using DG.Tweening.Plugins.Core.PathCore;
+using FantomLib;
 using Unity.Collections;
 using UnityEditor;
 using UnityEngine;
@@ -12,13 +13,18 @@ using UnityEngine.UI;
 
 public class SavePreset : MonoBehaviour
 {
+    public GameObject Dialog;
     public GameObject DebugSnack;
+    
+    
+    
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log(Application.persistentDataPath);
-        CreateXml();
-        
+        //CreateXml();
+    
+        //DebugSnack.GetComponent<Text>().text = Dialog.name;
     } 
 
     private List<PointObject> GatherObjects()
@@ -55,10 +61,13 @@ public class SavePreset : MonoBehaviour
         public Vector3 Position { get; set; }
     }
     
-    public void CreateXml()
+    public void CreateXml(string filename)
     {
         MakeDirectory(); //create directory to save items
         
+        
+        //string filename = "preset1";
+        //string filename = gameObject.name;
         List<PointObject> objects = GatherObjects();
         XDocument positions = new XDocument(
             new XComment("Positions of preset values"),
@@ -75,8 +84,8 @@ public class SavePreset : MonoBehaviour
             x = x + 1;
         }
         
-        positions.Save(Application.persistentDataPath + "/Presets/" + "preset1.xml");
-        DebugSnack.GetComponent<Text>().text = Application.persistentDataPath;
+        positions.Save(Application.persistentDataPath + "/Presets/" + filename + ".xml");
+        AndroidPlugin.ShowToast("Preset successfully saved as '" + filename + "'", true);
     }
 
     private int GrabType(GameObject go)
@@ -90,7 +99,7 @@ public class SavePreset : MonoBehaviour
         {
             output = 2; //barrier
         }
-        else if (go.name.Contains("marker"))
+        else if (go.name.Contains("marker") || go.name.Contains("ring"))
         {
             output = 3; //marker
         }
@@ -100,5 +109,10 @@ public class SavePreset : MonoBehaviour
         }
 
         return output;
+    }
+
+    public void SaveName()
+    {
+        AndroidPlugin.ShowSingleLineTextDialog("Enter filename", "Please enter a name for this preset:","filename", 15, "SavePreset", "CreateXml", "Save");
     }
 }

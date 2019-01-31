@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 //using Sirenix.OdinInspector;
 
@@ -20,11 +21,8 @@ public class buttoncontroller : MonoBehaviour
         btnCone.gameObject.SetActive(false);
         btnRing.gameObject.SetActive(false);
         btnBarrier.gameObject.SetActive(false);
-        if (btnPreset != null)
-        {
-            btnPreset.gameObject.SetActive(false);
-            presetPos = btnPreset.anchoredPosition;
-        }
+        btnPreset.gameObject.SetActive(false);
+        presetPos = btnPreset.anchoredPosition;
         conePos = btnCone.anchoredPosition;
         ringPos = btnRing.anchoredPosition;
         barrierPos = btnBarrier.anchoredPosition;

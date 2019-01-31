@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -25,10 +26,12 @@ public class DisplacementDisplay : MonoBehaviour
 				display.transform.Rotate(0, 180f, 0, Space.Self);
 				var dist = Vector3.Distance(display.transform.position, cam.transform.position);
 				var rounded = Math.Round(dist, 2);
-				display.GetComponent<TextMeshPro>().text = rounded.ToString() + "m";
+				display.GetComponent<TextMeshPro>().text = rounded + "m";
 			}
 		}
-	}
+
+	    DebugSnack.GetComponent<Text>().text = displays.ToList().Count().ToString() + "Displacement displays in action";
+    }
 
 	public void Display(GameObject item)
 	{
