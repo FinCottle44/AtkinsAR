@@ -65,20 +65,15 @@ public class SavePreset : MonoBehaviour
     {
         MakeDirectory(); //create directory to save items
         
-        
-        //string filename = "preset1";
-        //string filename = gameObject.name;
         List<PointObject> objects = GatherObjects();
         XDocument positions = new XDocument(
             new XComment("Positions of preset values"),
             new XElement("objects")
         );
         
-        print(objects.Count);
         int x = 1;
         foreach (PointObject obj in objects)
         {
-            print(obj);
             XElement el = new XElement("object" + x, new XAttribute("Type", obj.ObjectType.ToString()), obj.Position.ToString());//(1,2,3),(1) as position unique unlike objtype
             positions.Root.Add(el); //adds el as child of "objects" element defined above (root of positions)
             x = x + 1;
@@ -105,7 +100,7 @@ public class SavePreset : MonoBehaviour
         }
         else
         {
-            output = 0;
+            output = -1;
         }
 
         return output;
