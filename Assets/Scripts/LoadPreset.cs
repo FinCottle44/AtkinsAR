@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Security;
+using System.Xml.Linq;
+using GoogleARCoreInternal;
+using UnityEditor.Presets;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,12 +22,7 @@ public class LoadPreset : MonoBehaviour
     void Update()
     {
         
-    }
-
-    private void OpenUI()
-    {
-        
-    }
+    }    
     
     private List<string> ListPresets()
     {
@@ -33,5 +32,13 @@ public class LoadPreset : MonoBehaviour
             files.Add(f);
         }
         return files;
+    }
+
+    private void LoadXml(string selectedPresetName)
+    {
+        XDocument doc = new XDocument();
+        string file = PresetPath + "/" + selectedPresetName;
+        
+        doc = XDocument.Load(file);
     }
 }
