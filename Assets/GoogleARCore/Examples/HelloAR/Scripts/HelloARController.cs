@@ -210,7 +210,9 @@ namespace GoogleARCore.Examples.HelloAR
                         andyObject.tag = "point";
                         // Make Andy model a child of the anchor.
                         andyObject.transform.parent = anchor.transform;
+                        DebugSnack.GetComponent<Text>().text = "andyobj: " + andyObject;
                         displacement.Display(andyObject);
+                        displacement.Display(measureRing);
                     }
                     //else if (ddObject.value == 1)//cone
                     else
@@ -223,21 +225,9 @@ namespace GoogleARCore.Examples.HelloAR
                         andyObject.tag = "point";
                         // Make Andy model a child of the anchor.
                         andyObject.transform.parent = anchor.transform;
+                        DebugSnack.GetComponent<Text>().text = "andyobj: " + andyObject;
                         displacement.Display(andyObject);
                     }
-//                    else if (ddObject.value == 2)//barrier
-//                    {
-//                        Quaternion barrierCorrection = new Quaternion(0f, 0f, 0f, 0f);
-//                        var andyObject = Instantiate(prefab, hit.Pose.position, barrierCorrection);
-//                        // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
-//                        //andyObject.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
-//                        andyObject.transform.Rotate(-90, k_ModelRotation, 0, Space.Self);
-//                        //measureRing.transform.localScale = new Vector3(0.2f, 0, 0.2f);
-//                        andyObject.tag = "point";
-//                        // Make Andy model a child of the anchor.
-//                        andyObject.transform.parent = anchor.transform;
-//                        displacement.Display(andyObject);
-//                    }
                 }
             }
 

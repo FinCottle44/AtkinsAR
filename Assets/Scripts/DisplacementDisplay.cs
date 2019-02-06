@@ -30,17 +30,20 @@ public class DisplacementDisplay : MonoBehaviour
 			}
 		}
 
-	    DebugSnack.GetComponent<Text>().text = displays.ToList().Count().ToString() + "Displacement displays in action";
+	    //DebugSnack.GetComponent<Text>().text = displays.ToList().Count().ToString() + " Displacement displays";
     }
 
 	public void Display(GameObject item)
 	{
+		//DebugSnack.GetComponent<Text>().text = "d called w: " + item;	
+
 		Vector3 loc;
 		Color c;
 		if (helloAR.SelectionValue == 0)//if marker NOT CONE
 		{ 
 			loc = item.transform.position + new Vector3(0f, 0.3f, 0);
 			c = Color.white; //marker
+			DebugSnack.GetComponent<Text>().text = "MARKERMAKER";
 		} 
 		else
 		{
@@ -48,9 +51,11 @@ public class DisplacementDisplay : MonoBehaviour
 			c = Color.red; //cone - why no orange r u mad
 		} 
 		var display = Instantiate(textTemplate, loc, textTemplate.transform.rotation);
+		
 		display.tag = "pointText";
 		display.GetComponent<TextMeshPro>().color = c;
 		displays.Add(display);
+		
 	}
 
 	public void InstantiateTest()
